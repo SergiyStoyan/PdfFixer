@@ -17,7 +17,7 @@ namespace Cliver.PdfFixer
             try
             {
                 string[] ps = Environment.GetCommandLineArgs();
-                if (ps.Length < 1)
+                if (ps.Length < 2)
                 {
                     Console.WriteLine("USAGE: #<application.exe> <pdf>");
                     Console.WriteLine("Press any key to exit...");
