@@ -140,8 +140,16 @@ namespace Cliver.PdfFixer
 
             for (int i = 1; i <= k; i++)
             {
-                bool h = ps.AcroFields.RemoveField("---" + i);
-                bool g = ps.AcroFields.Fields.Remove("---" + i);
+                try
+                {
+                    bool h = ps.AcroFields.RemoveField("---" + i);
+                }
+                catch { }
+                try
+                {
+                    bool g = ps.AcroFields.Fields.Remove("---" + i);
+                }
+                catch { }
             }
             //ps.AcroFields.("---");
 
